@@ -1,4 +1,4 @@
-# All commands below when Xorg is started
+# Run all commands below when Xorg is started
 xrandr -s 1366x768
 xcompmgr &
 setxkbmap fr
