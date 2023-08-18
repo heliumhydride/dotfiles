@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ -z "$ROOTDIR" ] && ROOTDIR="$HOME/test-qemu"
+[ -z "$ROOTDIR" ] && ROOTDIR="/vms/test-qemu"
 TEMPLATE="$ROOTDIR/template.sh"
 
 error(){
