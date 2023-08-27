@@ -1,6 +1,11 @@
 #!/bin/bash
-
 quit=0
+
+adb devices -l | grep "device" | grep "product" > /dev/null
+if [ "$?" -eq 1 ]; then
+	>&2 echo "no android device is plugged in!"
+	exit 1
+fi
 
 function quit {
 	quit=1
