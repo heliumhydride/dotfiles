@@ -1,6 +1,7 @@
 @echo off
 
 copy _cmdrc.cmd %userprofile%
+echo _cmdrc.cmd deps: winfetch
 copy _vimrc-win32 %userprofile%\_vimrc
 copy _gvimrc %userprofile%
 echo modifications to _gvimrc will have to be done manually!
