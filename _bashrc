@@ -12,5 +12,5 @@ bind 'TAB:menu-complete'
 
 PATH="/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:$HOME/.local/bin:$HOME/scripts"
 
-neofetch --ascii_distro voidlinux_small --color_blocks off
+neofetch --color_blocks off
 #COLOR="1;34" scripts/minifetch
