@@ -1,7 +1,7 @@
 #!/bin/bash
 
-[ -z "$ROOTDIR" ] && ROOTDIR="/vms/test-qemu"
-TEMPLATE="$ROOTDIR/template.sh"
+[ -z "$VMS_DIR" ] && VMS_DIR="$HOME/test-qemu"
+TEMPLATE="$VMS_DIR/template.sh"
 
 error(){
 	echo -e "\e[1;31m=> $1\e[0m"
@@ -21,7 +21,7 @@ ask(){
 ask "vm name" VM_NAME
 ask "vm arch (none for default)" VM_ARCH
 ask "storage size" STOR_SIZE
-VM_DIR="$ROOTDIR/$VM_NAME"
+VM_DIR="$VMS_DIR/$VM_NAME"
 START_FILE="$VM_DIR/start.sh"
 DISK_FILE="$VM_DIR/$VM_NAME.qcow2" 
 

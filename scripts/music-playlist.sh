@@ -1,6 +1,9 @@
 #!/bin/bash
 
-MUSIC_PATH="$HOME/music"
+[ -z "$MUSIC_PATH" ] && MUSIC_PATH="$HOME/music"
 
-#mpv --no-audio-display --shuffle "$MUSIC_PATH"/*.mp3
-mpv --no-audio-display "$MUSIC_PATH"/*.mp3
+if [ "$SHUFFLE" -eq 1 ]; then
+	mpv --no-audio-display --shuffle "$MUSIC_PATH"/*.mp3
+else
+	mpv --no-audio-display "$MUSIC_PATH"/*.mp3
+fi
