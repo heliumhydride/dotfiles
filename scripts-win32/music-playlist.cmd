@@ -3,5 +3,8 @@ if "%MUSIC_PATH%" == "" (
 	set MUSIC_PATH="%userprofile%\Music"
 )
 
-::mpv --no-audio-display --shuffle %MUSIC_PATH%\*.mp3
-mpv --no-audio-display %MUSIC_PATH%\*.mp3
+if "%SHUFFLE%" == 1 (
+	mpv --no-audio-display --shuffle %MUSIC_PATH%\*.mp3
+) else (
+	mpv --no-audio-display %MUSIC_PATH%\*.mp3
+)
