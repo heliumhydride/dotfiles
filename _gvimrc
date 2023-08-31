@@ -3,3 +3,5 @@ color onehalfdark
 " set font
 set guifont=Iosevka\ Curly\ Light\ Italic\ Expanded\ 11
 "set guifont=Iosevka_Curly_Light_Extended:h11:W300:i:cANSI:qDRAFT
+
+set lines=36 columns=120
