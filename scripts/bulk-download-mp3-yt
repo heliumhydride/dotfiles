@@ -1,5 +1,5 @@
 #!/bin/bash
 
 for i in "$@"; do
-	yt-dlp -x --audio-format mp3 "$i"
+	yt-dlp -x -o '%(title)s.%(ext)s' --audio-format mp3 "$i" 
 done
