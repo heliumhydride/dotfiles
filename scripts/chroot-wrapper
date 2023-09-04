@@ -44,6 +44,7 @@ touch "$_dir/etc/resolv.conf"
 mount --bind /etc/resolv.conf "$_dir/etc/resolv.conf"
 info "bind-mounted /etc/resolv.conf to $_dir/etc/resolv.conf"
 
+echo
 # $_prog is intentionally unquoted to allow program arguments to be passed
 PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin" chroot "$_dir" $_prog
 _excode="$?"
