@@ -30,8 +30,8 @@ info(){
 [ -d "$_dir" ] || error "$_dir: non-existent directory"
 
 if [ "$_prog" = "" ]; then
-	warn "no program specified... defaulting to /bin/sh"
-	_prog="/bin/sh"
+	warn "no program specified... defaulting to /sbin/su -"
+	_prog="/bin/su -"
 fi
 
 for i in proc sys dev; do
