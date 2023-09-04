@@ -6,5 +6,6 @@ setxkbmap fr
 /home/core4/scripts/set-brightness "$(cat ~/.settings/backlight)"
 slstatus &
 clipit &
+pulseaudio &
 st &
 exec dwm
