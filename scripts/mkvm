@@ -6,6 +6,9 @@ TEMPLATE="$VMS_DIR/template.sh"
 error(){
 	echo -e "\e[1;31m=> $1\e[0m"
 }
+warn(){
+	echo -e "\e[1;33m=> $1\e[0m"
+}
 infon(){
 	echo -en "\e[1m=>\e[0m $1"
 }
@@ -36,6 +39,11 @@ DISK_FILE="$VM_DIR/$VM_NAME.qcow2"
 mkdir "$VM_DIR" -pv
 cp -v "$TEMPLATE" "$START_FILE"
 
-qemu-img create -f qcow2 "$DISK_FILE" "$STOR_SIZE"
+if [ "$STOR_SIZE" == 0 ]; then
+	info "storage size not set or set to 0, storage will not created"
+	warn "you will have to remove the disk line yourself if you dont use storage!"
+else 
+	qemu-img create -f qcow2 "$DISK_FILE" "$STOR_SIZE"
+fi
 [ "$VM_ARCH" = "x86_64" ] || sed -i "s/x86_64/$VM_ARCH/g" "$START_FILE"
 sed -i "s/MYDISKFILE/$VM_NAME.qcow2/g" "$START_FILE"
