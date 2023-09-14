@@ -5,6 +5,7 @@ alias youtube-dl="yt-dlp"
 alias librewolf="flatpak run io.gitlab.librewolf-community"
 alias vi="vim"
 
+export PROMPT_COMMAND='echo -en "\033]0; $USER@$HOSTNAME $("pwd") \a"'
 export HISTSIZE="10000"
 export LESSHISTFILE="~/.cache/lesshst"
 export PS1="\n[\e[31m\u\e[0m@\e[31m\h\e[0m] [\e[1;34m\w\e[0m] [\e[1;35m\t\e[0m]\n$ "
