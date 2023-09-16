@@ -33,6 +33,10 @@ function Tmakefile()
     :r ~/vimfiles/templates/Tmakefile.mk
 endfunction
 
+function Tmakefile2()
+    :r ~/vimfiles/templates/Tmakefile2.mk
+endfunction
+
 function Tsdlc()
     :r ~/vimfiles/templates/Tsdlc.c
 endfunction
