@@ -19,4 +19,7 @@ read -rp "qemu directory (default $HOME/test-qemu): " qemu_dir
 [ -z "$qemu_dir" ] && qemu_dir="$HOME/test-qemu"
 rm -rf "$qemu_dir"; cp -rv qemu "$qemu_dir"
 
-echo "any changes by machine will have to be made manually!"
+[ -e "$HOME/.bash" ] || mkdir "$HOME/.bash"
+cp -nv _bash/* "$HOME/.bash/"
+
+echo "any changes by machine will have to be made manually! (see ~/.bash/)"

@@ -1,0 +1,2 @@
+export MUSIC_PATH="/data/music"
+export VMS_DIR="/vms/qemu"
