@@ -7,7 +7,7 @@
 
 [ -z "$HOME" ] && ( echo "$HOME is empty, cannot continue."; exit 1; )
 
-for i in bashrc vimrc gvimrc xinitrc; do
+for i in bashrc vimrc gvimrc xinitrc gitconfig; do
 	cp -v "_${i}" "$HOME/.${i}"
 done
 
