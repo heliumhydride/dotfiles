@@ -12,6 +12,10 @@ set smartindent
 syntax on
 " auto cd to files dir
 set autochdir
+" show exissting tab to be 2 spaces width
+set tabstop=2
+" When pressing tab, print 2 spaces instead
+set expandtab
 
 " Brace+quotes autocomplete
 inoremap ( ()<Esc>i
