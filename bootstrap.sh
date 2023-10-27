@@ -7,17 +7,24 @@
 
 [ -z "$HOME" ] && ( echo "$HOME is empty, cannot continue."; exit 1; )
 
-for i in bashrc vimrc gvimrc xinitrc gitconfig; do
-	cp -v "_${i}" "$HOME/.${i}"
+for i in bashrc vimrc gvimrc gitconfig; do
+  cp -v "_${i}" "$HOME/.${i}"
 done
+
+cp -nv _xinitrc "$HOME/.xinitrc"
 
 rm -rf "$HOME/.vim"
 cp -rv vimfiles "$HOME/.vim"
-rm -rf "$HOME/scripts"
-cp -rv scripts "$HOME"
+
+scripts_to_rm="$(ls -1 scripts|tr '\n' ' '|sed 's/update-all//g')"
+for i in $scripts_to_rm; do
+  rm -fv "$HOME/scripts/$i"
+done
+
+cp -rnv scripts/* "$HOME"
+
 read -rp "qemu directory (default $HOME/test-qemu): " qemu_dir
 [ -z "$qemu_dir" ] && qemu_dir="$HOME/test-qemu"
-#rm -rf "$qemu_dir"; cp -rv qemu "$qemu_dir"
 [ -e "$qemu_dir" ] || mkdir "$qemu_dir"
 cp -v qemu/* "$qemu_dir"/
 
