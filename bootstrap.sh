@@ -21,7 +21,8 @@ for i in $scripts_to_rm; do
   rm -fv "$HOME/scripts/$i"
 done
 
-cp -rnv scripts/* "$HOME"
+[ -e "$HOME/scripts" ] || mkdir -p $HOME/scripts
+cp -rnv scripts/* "$HOME/scripts"
 
 read -rp "qemu directory (default $HOME/test-qemu): " qemu_dir
 [ -z "$qemu_dir" ] && qemu_dir="$HOME/test-qemu"
