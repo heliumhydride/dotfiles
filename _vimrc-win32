@@ -1,4 +1,7 @@
-" set backspace to 2 (only useful for windows)
+" fix ligatures on windows
+set renderoptions=type:directx
+set encoding=utf-8
+" set backspace to 2 (non-linux systems)
 set bs=2
 " line numbers
 set number
