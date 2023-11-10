@@ -1,3 +1,5 @@
+" fix ligatures on non-windows
+set guiligatures=!\"$%&\'()*+,-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{\|}~
 " line numbers
 set number
 " dont create a ton of files
