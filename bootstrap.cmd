@@ -4,7 +4,8 @@ copy _cmdrc.cmd "%userprofile%"
 copy _vimrc-win32 "%userprofile%\_vimrc"
 copy _gvimrc "%userprofile%"
 echo _cmdrc.cmd deps: winfetch
-echo modifications to _gvimrc will have to be done manually!
+echo changes to _gvimrc will have to be done manually!
+echo tweaks on _cmdrc will have to be done manually
 echo.
 
 if not exist "%userprofile%\scripts" ( mkdir "%userprofile%\scripts" )
@@ -29,3 +30,5 @@ for %%i in (regfiles\*) do (
 
 echo.
 echo rmskins will have to be installed manually!
+echo .
+pause
