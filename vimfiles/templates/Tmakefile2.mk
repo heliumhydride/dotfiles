@@ -4,14 +4,14 @@ ifeq ($(WIN32),1)
 	O += .exe
 endif
 
-SRC_DIR := ./src
-
-SRCS := $(shell find $(SRC_DIR) -name '*.cpp' -or -name '*.c' -or -name '*.s')
-OBJS := $(SRCS:%.c=%.o)
+OBJS = file1.o file2.o
 
 all: $(O)
 
-%.o: %.c
+file1.o: file1.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+file2.o: file2.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(O): $(OBJS)
