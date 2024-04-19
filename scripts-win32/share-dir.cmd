@@ -1,9 +1,9 @@
 @echo off
 
 if "%~1"=="" (
-	dir="."
+  set dir="."
 ) else (
-	dir="%1"
+  set dir="%1"
 )
 
 if not exist %dir% goto dir_error
@@ -13,5 +13,4 @@ busybox httpd -fvvv -h "%dir%"
 
 :dir_error
 echo directory %dir% not found!
-timeout 2 > nul
 
