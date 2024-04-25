@@ -2,10 +2,12 @@
 xrandr -s 1366x768
 xcompmgr &
 setxkbmap fr
+/usr/libexec/xfce-polkit &
 /home/core4/scripts/slideshow /home/core4/pics/wallpapers &
 /home/core4/scripts/set-brightness "$(cat ~/.settings/backlight)"
 slstatus &
 clipit &
+udiskie -t -f "st -e nnn" -n &
 pulseaudio &
 st &
 exec dwm

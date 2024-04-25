@@ -41,10 +41,3 @@ function Tmakefile2()
     :r ~/.vim/templates/Tmakefile2.mk
 endfunction
 
-function Tsdlc()
-    :r ~/.vim/templates/Tsdlc.c
-endfunction
-
-function Tpygame()
-    :r ~/.vim/templates/Tpygame.py
-endfunction
