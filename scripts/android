@@ -12,7 +12,7 @@ function quit {
 }
 
 function shell {
-	adb shell
+	st -e adb shell
 }
 
 function screen {
@@ -37,7 +37,8 @@ function recovery {
 
 
 while [ "$quit" -lt 1 ]; do
-	eval $(grep function $0 | cut -f2 -d' ' | sed '$ d' | fzf --prompt "Select operation for the device: ")
+	#eval $(grep function $0 | cut -f2 -d' ' | sed '$ d' | fzf --prompt "Select operation for the device: ")
+	eval $(grep function $0 | cut -f2 -d' ' | sed '$ d' | dmenu -l 7)
 	[ $quit = 1 ] || read -p "Press any key to continue..." none
 done
 
