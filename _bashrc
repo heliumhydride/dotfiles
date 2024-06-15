@@ -16,4 +16,4 @@ bind 'TAB:menu-complete'
 . "$HOME/.bash/path"
 . "$HOME/.bash/filestuff"
 
-neofetch --color_blocks off
+fastfetch
