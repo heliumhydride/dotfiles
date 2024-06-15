@@ -33,4 +33,6 @@ cp -v qemu/* "$qemu_dir"/
 [ -e "$HOME/.bash" ] || mkdir "$HOME/.bash"
 cp -nv _bash/* "$HOME/.bash/"
 
-echo "any changes by machine will have to be made manually! (see ~/.bash/ and ~/.bashrc)"
+cp -rv _config/* "$HOME/.config"
+
+echo "any changes by machine will have to be made manually! (see ~/.bash/, ~/.bashrc, ~/.config/fastfetch/config.jsonc, ...)"

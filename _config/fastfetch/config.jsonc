@@ -1,0 +1,103 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "small",
+    "padding": {
+      "bottom": 1,
+      "right": 2
+    }
+  },
+  "display": {
+    "separator": ">> ",
+    "color": "0"
+  },
+  "modules": [
+    {
+      "format": ">> {#1}{1}{#}{7}{#1}{2} <<",
+      "type": "title"
+    },
+    {
+      "format": "------------------------------------------------------ software ----",
+      "type" : "custom"
+    },
+    {
+      "format": "{2}",
+      "key": "| {#1;31}os   ",
+      "type": "os"
+    },
+    {
+      "format": "{12}",
+      "key": "| {#1;33}arch ",
+      "type": "os"
+    },
+    {
+      "key": "| {#1;32}kern ",
+      "type": "kernel"
+    },
+    {
+      "key": "| {#1;36}sh   ",
+      "type": "shell"
+    },
+    {
+      "format": "{2}",
+      "key": "| {#1;34}wm   ",
+      "type": "wm"
+    },
+    {
+      "format": "{5} ({8})",
+      "key": "| {#1;35}term ",
+      "type": "terminal"
+    },
+    {
+      "key": "| {#1}pkgs ",
+      "type": "packages"
+    },
+    {
+      "format": "------------------------------------------------------ hardware ----",
+      "type" : "custom"
+    },
+    {
+      "key": "| {#1;31}pc   ",
+      "type": "host"
+    },
+    {
+      "key": "| {#1;33}up   ",
+      "type": "uptime"
+    },
+    {
+      "format": "{6} >> {1}x{2} @ {3}Hz",
+      "key": "| {#1;32}disp ",
+      "type": "display"
+    },
+    {
+      "format": "{1} x{5} @ {7} GHz",
+      "key": "| {#1;36}cpu  ",
+      "type": "cpu"
+    },
+    {
+      "key": "| {#1;34}gpu  ",
+      "type": "gpu"
+    },
+    {
+      "key": "| {#1;35}ram  ",
+      "type": "memory"
+    },
+    {
+      "key": "| {#1;37}swap ",
+      "type": "swap"
+    },
+    {
+      "format": "{10} >> {1} / {2} ({3}) - {9}",
+      "key": "| {#1;31}disk ",
+      "type": "disk"
+    },
+    {
+      "key": "| {#1;33}lip  ",
+      "type": "localip"
+    },
+    {
+      "format": "--------------------------------------------------------------------",
+      "type" : "custom"
+    }
+  ]
+}

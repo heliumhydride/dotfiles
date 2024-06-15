@@ -28,6 +28,9 @@ for %%i in (regfiles\*) do (
 	reg import %%i
 )
 
+if not exist "%userprofile%\.config" ( mkdir "%userprofile\.config")
+xcopy _config\* "%userprofile\.config" /s /i
+
 echo.
 echo rmskins will have to be installed manually!
 echo .
