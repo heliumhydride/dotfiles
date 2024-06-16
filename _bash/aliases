@@ -2,5 +2,6 @@ alias ll="ls --color -Al"
 alias ls="ls --color -A"
 alias youtube-dl="yt-dlp"
 #alias sudo="doas"
-alias librewolf="flatpak run io.gitlab.librewolf-community"
 alias vi="vim"
+# useful on voidlinux
+#alias gvim="gvim-huge"
