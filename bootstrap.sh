@@ -12,6 +12,7 @@ for i in bashrc vimrc gvimrc gitconfig; do
 done
 
 cp -nv _xinitrc "$HOME/.xinitrc"
+cp -nv _xsession "$HOME/.xsession"
 
 rm -rf "$HOME/.vim"
 cp -rv vimfiles "$HOME/.vim"

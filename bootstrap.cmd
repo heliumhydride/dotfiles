@@ -3,9 +3,7 @@
 copy _cmdrc.cmd "%userprofile%"
 copy _vimrc-win32 "%userprofile%\_vimrc"
 copy _gvimrc "%userprofile%"
-echo _cmdrc.cmd deps: winfetch
-echo changes to _gvimrc will have to be done manually!
-echo tweaks on _cmdrc will have to be done manually
+copy _gitconfig "%userprofile\.gitconfig"
 echo.
 
 if not exist "%userprofile%\scripts" ( mkdir "%userprofile%\scripts" )
@@ -32,6 +30,9 @@ if not exist "%userprofile%\.config" ( mkdir "%userprofile\.config")
 xcopy _config\* "%userprofile\.config" /s /i
 
 echo.
+echo _cmdrc.cmd deps: fastfetch, clink
+echo tweaks on _cmdrc will have to be done manually
+echo changes to _gvimrc will have to be done manually!
 echo rmskins will have to be installed manually!
 echo .
 pause
