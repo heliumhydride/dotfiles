@@ -1,3 +1,10 @@
+" for lightline
+set laststatus=2
+set noshowmode
+set background=dark
+let g:lightline = {
+      \ 'colorscheme': 'one',
+\ }
 " fix ligatures on windows
 set renderoptions=type:directx
 set encoding=utf-8
@@ -44,10 +51,3 @@ function Tmakefile2()
     :r ~/vimfiles/templates/Tmakefile2.mk
 endfunction
 
-function Tsdlc()
-    :r ~/vimfiles/templates/Tsdlc.c
-endfunction
-
-function Tpygame()
-    :r ~/vimfiles/templates/Tpygame.py
-endfunction
