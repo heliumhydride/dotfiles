@@ -92,6 +92,7 @@
       "type": "disk"
     },
     {
+      "format": "{4} >> {1}",
       "key": "| {#1;32}lip  ",
       "type": "localip"
     },

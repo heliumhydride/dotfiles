@@ -27,7 +27,7 @@ for %%i in (regfiles\*) do (
 )
 
 if not exist "%userprofile%\.config" ( mkdir "%userprofile\.config")
-xcopy _config\* "%userprofile\.config" /s /i
+xcopy _config\* "%userprofile%\.config" /s /i
 
 echo.
 echo _cmdrc.cmd deps: fastfetch, clink

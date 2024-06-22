@@ -1,0 +1,13 @@
+#!/bin/bash
+# QUERY="$(echo $* | sed 's/ /%20/g')"
+QUERY="$(echo 'Type your search query here...' | dmenu)"
+[ "$QUERY" == "Type your search query here..." ] && exit 0
+
+# QUERY="$(echo $QUERY | sed 's/ /%20/g')"
+QUERY="${QUERY// /%20}"
+
+SEARCH_ENGINE="https://searx.be/search?q="
+URL="${SEARCH_ENGINE}${QUERY}"
+
+echo "$URL"
+web "$URL"
