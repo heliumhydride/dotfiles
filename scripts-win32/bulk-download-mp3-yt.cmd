@@ -1,5 +1,5 @@
 @echo off
 
 for %%I in (%*) do (
-	yt-dlp -x --audio-format mp3 -- %%I
+	yt-dlp -x -o "%%(title)s.%%(ext)s" --audio-format mp3 -- %%I
 )
