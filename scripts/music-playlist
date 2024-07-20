@@ -1,9 +1,39 @@
-#!/bin/bash
+#!/bin/sh
 
-[ -z "$MUSIC_PATH" ] && MUSIC_PATH="$HOME/music"
+. "$(dirname "$0")/script_common.lib.sh" || exit 1
 
-if [ "$SHUFFLE" -eq 1 ]; then
-	mpv --no-audio-display --shuffle "$MUSIC_PATH"/*.mp3
+[ -z "$MUSIC_PATH" ] && {
+  if . "$HOME/.config/user-dirs.dirs"; then
+    MUSIC_PATH="$XDG_MUSIC_DIR"
+  else
+    MUSIC_PATH="$HOME/music"
+  fi
+}
+
+PLAYLIST_PATH="${MUSIC_PATH}/playlist.txt"
+
+print_usage() {
+  echo "$0 [-s] | [-e] | [-h]"
+  echo "  -s, --shuffle: play playlist shuffled"
+  echo "  -e, --edit: edit playlist with \$EDITOR instead of playing it"
+  echo "  -h, --help: show this help"
+  echo ""
+  echo "playlist path can be edited in this script (see line 13)"
+}
+
+for arg in "$@"; do
+  case "$arg" in
+    -s|--shuffle) _shuffle=1;;
+    -e|--edit) "$EDITOR" "$PLAYLIST_PATH"
+               exit 0;;
+    *) print_usage
+       exit 0;;
+  esac
+done
+
+
+if [ "$_shuffle" -eq 1 ]; then
+	mpv --no-audio-display --shuffle --playlist="$PLAYLIST_PATH"
 else
-	mpv --no-audio-display "$MUSIC_PATH"/*.mp3
+	mpv --no-audio-display --playlist="$PLAYLIST_PATH"
 fi
