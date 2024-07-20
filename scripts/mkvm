@@ -1,27 +1,12 @@
 #!/bin/bash
 
+. "$(dirname "$0")/script_common.lib.sh" || exit 1
+
 [ -z "$VMS_DIR" ] && VMS_DIR="$HOME/test-qemu"
 TEMPLATE="$VMS_DIR/template.sh"
 
-error() {
-	echo -e "\e[1;31m=> $1\e[0m"
-}
-warn() {
-	echo -e "\e[1;33m=> $1\e[0m"
-}
-infon() {
-	echo -en "\e[1m=>\e[0m $1"
-}
-info() {
-	infon "$1\n"
-}
-
-ask(){
-	infon "$1: "
-	read -r "$2"
-}
-
 if [ -z "$1" ]; then
+  _dmenu_interactive=1
   ask "vm name (def: vm)" VM_NAME
 else
   info "vm name (def: vm): $1"

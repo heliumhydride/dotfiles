@@ -2,14 +2,7 @@
 
 _PROGNAME="$0"
 
-error(){
-	echo -e "[$_PROGNAME]::[\e[1;31merror\e[0m]: $1"
-	exit 1
-}
-
-info(){
-	echo -e "[$_PROGNAME]::[\e[1;34minfo\e[0m]: $1"
-}
+. "$(dirname "$0")/script_common.lib.sh" || exit 1
 
 [ "$USER" != root ] && error "please run this script as root."
 
