@@ -32,7 +32,7 @@ for arg in "$@"; do
 done
 
 
-if [ "$_shuffle" -eq 1 ]; then
+if [ "$_shuffle" = "1" ]; then
 	mpv --no-audio-display --shuffle --playlist="$PLAYLIST_PATH"
 else
 	mpv --no-audio-display --playlist="$PLAYLIST_PATH"
