@@ -4,7 +4,7 @@ if "%MUSIC_PATH%" == "" (
 )
 
 if "%SHUFFLE%" == 1 (
-	mpv --no-audio-display --shuffle %MUSIC_PATH%\*.mp3
+	mpv --no-audio-display --shuffle --loop-playlist=inf --playlist=%MUSIC_PATH%\playlist.txt
 ) else (
-	mpv --no-audio-display %MUSIC_PATH%\*.mp3
+	mpv --no-audio-display --loop-playlist=inf --playlist=%MUSIC_PATH%\playlist.txt
 )

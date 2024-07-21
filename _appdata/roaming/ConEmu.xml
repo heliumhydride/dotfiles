@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2024-07-18 00:47:38" build="230724">
+		<key name=".Vanilla" modified="2024-07-21 16:03:09" build="230724">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -40,8 +40,8 @@
 			<value name="FontUseUnits" type="hex" data="01"/>
 			<value name="FontSize" type="ulong" data="14"/>
 			<value name="StatusFontHeight" type="long" data="12"/>
-			<value name="TabFontHeight" type="long" data="18"/>
-			<key name="HotKeys" modified="2024-07-17 21:50:31" build="230724">
+			<value name="TabFontHeight" type="long" data="12"/>
+			<key name="HotKeys" modified="2024-07-21 16:03:09" build="230724">
 				<value name="MinimizeRestore" type="dword" data="000011c0"/>
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="000000a2"/>
@@ -232,7 +232,7 @@
 				<value name="KeyMacro32" type="dword" data="00000000"/>
 				<value name="KeyMacro32.Text" type="string" data=""/>
 				<value name="CTS.VkBlock" type="hex" data="A4"/>
-				<value name="CTS.VkText" type="hex" data="A0"/>
+				<value name="CTS.VkText" type="hex" data="00"/>
 				<value name="CTS.VkAct" type="hex" data="00"/>
 				<value name="CTS.VkPrompt" type="hex" data="00"/>
 				<value name="FarGotoEditorVk" type="hex" data="A2"/>
@@ -338,16 +338,16 @@
 			<value name="UserScreenTransparent" type="hex" data="00"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
-			<value name="UseCurrentSizePos" type="hex" data="01"/>
+			<value name="UseCurrentSizePos" type="hex" data="00"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="726"/>
-			<value name="ConWnd Y" type="long" data="326"/>
+			<value name="ConWnd X" type="long" data="349"/>
+			<value name="ConWnd Y" type="long" data="224"/>
 			<value name="LastMonitor" type="string" data="6,39,1914,1034"/>
-			<value name="ConWnd Width" type="dword" data="0000008c"/>
-			<value name="ConWnd Height" type="dword" data="00000021"/>
+			<value name="ConWnd Width" type="dword" data="00000087"/>
+			<value name="ConWnd Height" type="dword" data="00000023"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="RestoreInactive" type="hex" data="00"/>
@@ -392,9 +392,9 @@
 				<line data="# alias gl=git-log"/>
 				<line data="# alias glb=git-log --branches --date-order"/>
 			</value>
-			<value name="CTS.Intelligent" type="hex" data="01"/>
+			<value name="CTS.Intelligent" type="hex" data="00"/>
 			<value name="CTS.IntelligentExceptions" type="string" data="far|vim"/>
-			<value name="CTS.AutoCopy" type="hex" data="01"/>
+			<value name="CTS.AutoCopy" type="hex" data="00"/>
 			<value name="CTS.ResetOnRelease" type="hex" data="00"/>
 			<value name="CTS.IBeam" type="hex" data="01"/>
 			<value name="CTS.EndOnTyping" type="hex" data="00"/>
@@ -407,7 +407,7 @@
 			<value name="CTS.ForceLocale" type="dword" data="00000000"/>
 			<value name="CTS.RBtnAction" type="hex" data="03"/>
 			<value name="CTS.MBtnAction" type="hex" data="00"/>
-			<value name="CTS.ColorIndex" type="hex" data="E0"/>
+			<value name="CTS.ColorIndex" type="hex" data="F0"/>
 			<value name="ClipboardConfirmEnter" type="hex" data="01"/>
 			<value name="AutoTrimSingleLine" type="hex" data="00"/>
 			<value name="ClipboardConfirmLonger" type="ulong" data="200"/>
@@ -459,7 +459,7 @@
 			<value name="DragPanelBothEdges" type="hex" data="00"/>
 			<value name="KeyBarRClick" type="hex" data="01"/>
 			<value name="StatusBar.Show" type="hex" data="01"/>
-			<value name="StatusBar.Flags" type="dword" data="00000001"/>
+			<value name="StatusBar.Flags" type="dword" data="00000005"/>
 			<value name="StatusFontFace" type="string" data="Segoe UI"/>
 			<value name="StatusFontCharSet" type="ulong" data="0"/>
 			<value name="StatusBar.Color.Back" type="dword" data="00000000"/>
@@ -470,7 +470,7 @@
 			<value name="StatusBar.Hide.NumL" type="hex" data="00"/>
 			<value name="StatusBar.Hide.ScrL" type="hex" data="01"/>
 			<value name="StatusBar.Hide.VisL" type="hex" data="01"/>
-			<value name="StatusBar.Hide.InputGrouping" type="hex" data="00"/>
+			<value name="StatusBar.Hide.InputGrouping" type="hex" data="01"/>
 			<value name="StatusBar.Hide.Lang" type="hex" data="01"/>
 			<value name="StatusBar.Hide.KeyHooks" type="hex" data="01"/>
 			<value name="StatusBar.Hide.TMode" type="hex" data="00"/>
@@ -507,7 +507,7 @@
 			<value name="StatusBar.Hide.Sync" type="hex" data="00"/>
 			<value name="StatusBar.Hide.Proc" type="hex" data="00"/>
 			<value name="StatusBar.Hide.Title" type="hex" data="01"/>
-			<value name="StatusBar.Hide.Time" type="hex" data="01"/>
+			<value name="StatusBar.Hide.Time" type="hex" data="00"/>
 			<value name="StatusBar.Hide.Resize" type="hex" data="00"/>
 			<value name="Tabs" type="hex" data="01"/>
 			<value name="TabsLocation" type="hex" data="00"/>
@@ -524,7 +524,7 @@
 			<value name="TaskBarOverlay" type="hex" data="00"/>
 			<value name="TaskbarProgress" type="hex" data="01"/>
 			<value name="TabCloseMacro" type="string" data=""/>
-			<value name="TabFontFace" type="string" data="ProggyCleanTTSZ"/>
+			<value name="TabFontFace" type="string" data="Segoe UI"/>
 			<value name="TabFontCharSet" type="ulong" data="0"/>
 			<value name="SaveAllEditors" type="string" data=""/>
 			<value name="ToolbarAddSpace" type="long" data="0"/>
@@ -539,7 +539,7 @@
 			<value name="AdminTitleSuffix" type="string" data=" (Admin)"/>
 			<value name="AdminShowShield" type="hex" data="01"/>
 			<value name="HideInactiveConsoleTabs" type="hex" data="00"/>
-			<value name="ShowFarWindows" type="hex" data="01"/>
+			<value name="ShowFarWindows" type="hex" data="00"/>
 			<value name="TryToCenter" type="hex" data="01"/>
 			<value name="CenterConsolePad" type="ulong" data="4"/>
 			<value name="ShowScrollbar" type="hex" data="02"/>
@@ -667,11 +667,12 @@
 				<value name="Count" type="long" data="0"/>
 			</key>
 			<value name="CmdLineHistory" type="multi">
+				<line data="{cmd::cmd (Admin)}"/>
+				<line data="{busybox::sh}"/>
 				<line data="{powershell::powershell}"/>
 				<line data="{powershell::powershell (Admin)}"/>
 				<line data="{pwsh::PowerShell}"/>
 				<line data="{sh::busybox sh}"/>
-				<line data="{cmd::cmd (Admin)}"/>
 				<line data="{Shells:busybox sh}"/>
 			</value>
 		</key>

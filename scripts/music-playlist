@@ -33,7 +33,7 @@ done
 
 
 if [ "$_shuffle" = "1" ]; then
-	mpv --no-audio-display --shuffle --playlist="$PLAYLIST_PATH"
+	mpv --no-audio-display --shuffle --loop-playlist=inf --playlist="$PLAYLIST_PATH"
 else
-	mpv --no-audio-display --playlist="$PLAYLIST_PATH"
+	mpv --no-audio-display --loop-playlist=inf --playlist="$PLAYLIST_PATH"
 fi
