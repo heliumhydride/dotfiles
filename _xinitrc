@@ -1,12 +1,15 @@
 # All commands below when Xorg is started
-xrandr -s 1366x768
+xrandr -s 1920x1080
 xcompmgr &
 setxkbmap fr
 /usr/libexec/xfce-polkit &
 /home/core4/scripts/slideshow /home/core4/pics/wallpapers &
 /home/core4/scripts/set-brightness "$(cat ~/.settings/backlight)"
+#/home/core4/scripts/dp-1920x1080_60hz-monitor
+#RED_TIME=1930 BLUE_TIME=0600 NIGHT_TEMP=3000 /home/core4/scripts/colortemp &
 slstatus &
 clipit &
+blueman-applet &
 udiskie -t -f "st -e nnn" -nA &
 pulseaudio &
 st &
