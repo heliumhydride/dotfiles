@@ -1,10 +1,9 @@
+set termguicolors
 " for lightline
 set laststatus=2
 set noshowmode
 set background=dark
-let g:lightline = {
-      \ 'colorscheme': 'one',
-\ }
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 " fix ligatures on non-windows
 set guiligatures=!\"$%&\'()*+,-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{\|}~
 " line numbers
