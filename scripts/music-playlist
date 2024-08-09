@@ -10,7 +10,7 @@
   fi
 }
 
-PLAYLIST_PATH="${MUSIC_PATH}/playlist.txt"
+PLAYLIST_PATH="${MUSIC_PATH}/playlist.m3u8"
 
 print_usage() {
   echo "$0 [-s] | [-e] | [-h]"
