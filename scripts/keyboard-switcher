@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# may not work on all Xorg setups, needs testing on other pcs
+kmap="$(setxkbmap -print|grep symbols|cut -f2 -d'+')"
+
+case "$kmap" in
+  "fr") setxkbmap us;;
+  "us") setxkbmap ru;;
+  "ru") setxkbmap fr;;
+esac
+
