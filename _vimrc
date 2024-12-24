@@ -20,10 +20,15 @@ set smartindent
 syntax on
 " auto cd to files dir
 set autochdir
-" show exissting tab to be 2 spaces width
+" show existing tab to be 2 spaces width
 set tabstop=2
-" When pressing tab, print 2 spaces instead
-set expandtab
+" When pressing tab, print 2 spaces instead, except when using makefiles
+" because only tabs are supported with makefiles
+if(&ft != 'makefile')
+  set expandtab
+endif
+" Only autoindent by 2 spaces
+set shiftwidth=2
 
 " Brace+quotes autocomplete
 inoremap ( ()<Esc>i
@@ -33,6 +38,10 @@ inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
+
+" setup omnicomplete for autocompletion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " Now time for some templates!
 function Tc()

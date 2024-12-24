@@ -5,3 +5,4 @@ alias youtube-dl="yt-dlp"
 alias vi="vim"
 # useful on voidlinux
 #alias gvim="gvim-huge"
+alias xclip="xclip -selection c"
