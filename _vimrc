@@ -56,3 +56,10 @@ function Tmakefile2()
     :r ~/.vim/templates/Tmakefile2.mk
 endfunction
 
+function Thtml()
+    :r ~/.vim/templates/Thtml.html
+endfunction
+
+function Tcss()
+    :r ~/.vim/templates/Tcss.css
+endfunction
