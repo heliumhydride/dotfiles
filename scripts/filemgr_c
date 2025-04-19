@@ -1,0 +1,4 @@
+#!/bin/sh
+EDITOR=gvim
+[ -e /usr/bin/gvim-huge ] && EDITOR=gvim-huge
+nnn -de
