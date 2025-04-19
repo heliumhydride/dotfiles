@@ -11,7 +11,7 @@ setxkbmap fr
 slstatus &
 clipit &
 blueman-applet &
-udiskie -t -f "st -e nnn" -nA &
+udiskie -t -f filemgr -nA &
 pulseaudio &
 st &
 exec dwm
