@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 . "$(dirname "$0")/script_common.lib.sh" || exit 1
 
@@ -11,29 +11,39 @@
 }
 
 PLAYLIST_PATH="${MUSIC_PATH}/playlist.m3u8"
+MPV_FLAGS=(--no-audio-display --loop-playlist=inf --playlist="$PLAYLIST_PATH")
+TERMINAL="st"
 
 print_usage() {
   echo "$0 [-s] | [-e] | [-h]"
   echo "  -s, --shuffle: play playlist shuffled"
   echo "  -e, --edit: edit playlist with \$EDITOR instead of playing it"
+  echo "  -n, --no_terminal: do not launch terminal, also does not launch visualizer, installed or not"
   echo "  -h, --help: show this help"
   echo ""
   echo "playlist path can be edited in this script (see line 13)"
 }
 
+_shuffle=0
+_in_term=1
 for arg in "$@"; do
   case "$arg" in
     -s|--shuffle) _shuffle=1;;
     -e|--edit) "$EDITOR" "$PLAYLIST_PATH"
                exit 0;;
+    -n|--no_terminal) _in_term=0;;
     *) print_usage
        exit 0;;
   esac
 done
 
-
-if [ "$_shuffle" = "1" ]; then
-	mpv --no-audio-display --shuffle --loop-playlist=inf --playlist="$PLAYLIST_PATH"
+[ "$_shuffle" = "1" ] && MPV_FLAGS+=("--shuffle")
+if [ "$_in_term" == 1 ]; then
+  "$TERMINAL" -e mpv "${MPV_FLAGS[@]}" &
 else
-	mpv --no-audio-display --loop-playlist=inf --playlist="$PLAYLIST_PATH"
+  mpv "${MPV_FLAGS[@]}"
 fi
+
+(which cava 2>&1 && [ "$_in_term" == 1 ]) && {
+  "$TERMINAL" -e cava &
+} # launch audio visualizer if installed and we are launching in a new terminal window
