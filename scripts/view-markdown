@@ -1,0 +1,48 @@
+#!/bin/sh
+
+. "$(dirname "$0")/script_common.lib.sh" || exit 1
+
+WEB_BROWSER="web"
+
+usage() {
+  echo "usage: $(basename $0) [file.md]"
+  exit 1
+}
+
+[ "$1" = "" ] && usage
+[ -e "$1" ] || error "file $1 not found"
+
+# 1. template html
+# 2. mktemp file and put bootstrap html into it
+# 3. cat markdown contents into it
+# 4. open in browser
+
+tempfile="$(mktemp -u).html"
+
+cat > "$tempfile" << EOF
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>view-markdown</title>
+    <meta charset="utf-8">
+    <style>
+      html {
+        background-color: #1E1E1E;
+        color: white
+      }
+    </style>
+  </head>
+  <body>
+    <div id='content'></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <script>
+      document.getElementById('content').innerHTML =
+      marked.parse("$(sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/\\n/g' $1)");
+  </script>
+  </body>
+</html>
+EOF
+
+"$WEB_BROWSER" "$tempfile"
+
