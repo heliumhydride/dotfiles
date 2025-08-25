@@ -26,12 +26,7 @@ cat > "$tempfile" << EOF
   <head>
     <title>view-markdown</title>
     <meta charset="utf-8">
-    <style>
-      html {
-        background-color: #1E1E1E;
-        color: white
-      }
-    </style>
+    <link rel="stylesheet" href="file://$HOME/.config/view-markdown-style.css">
   </head>
   <body>
     <div id='content'></div>

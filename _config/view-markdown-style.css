@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  /* background-color: #303030; */
+  background-color: #272935;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 18px;
+}
+
+body {
+  margin: 80px 30% 80px 30%; 
+}
+
+a {
+  color: #0EA5E9;
+}
+
+strong {
+  font-style: normal;
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
+}
+
+code, samp {
+  background-color: #24273a;
+}
+
+pre code, pre samp {
+  background-color: #24273a;
+  display: block;
+  white-space: pre-wrap;
+  border: solid 2px white;
+  padding: 10px 0 10px 30px;
+  font-family: 'Monospace';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  font-stretch: expanded;
+  word-wrap: break-word;
+}
+
+article {
+  margin: 0 20% 0 20%;
+  padding: 5px 30px;
+  background: #21222c;
+  border-radius: 25px;
+}
+
+img, video {
+  border: solid 2px white;
+  max-width: 80%;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
+
+table tr td {
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+
+table tr th {
+  border-bottom: 1px solid white;
+  font-size: 18pt;
+}
+
+
