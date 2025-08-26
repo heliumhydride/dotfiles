@@ -27,7 +27,9 @@ em {
 }
 
 code, samp {
-  background-color: #24273a;
+  background-color: #313544;
+  padding: 2px 4px;
+  border-radius: 4px
 }
 
 pre code, pre samp {
