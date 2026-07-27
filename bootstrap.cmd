@@ -33,9 +33,12 @@ for %%r in (regfiles\*) do (
 )
 
 echo.
+echo ----------------------------------
 echo _cmdrc.cmd deps: fastfetch, clink
 echo tweaks on _cmdrc will have to be done manually
 echo changes to _gvimrc ^(regarding the guifont setting^) will have to be done manually!
 echo rmskins will have to be installed manually!
+echo for cava, remove the ^[output^] related config
+echo ----------------------------------
 echo .
 pause
