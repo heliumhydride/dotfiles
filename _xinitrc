@@ -1,7 +1,7 @@
 # All commands below when Xorg is started
 xrandr -s 1920x1080
 xcompmgr &
-setxkbmap fr
+setxkbmap fr,fr,us,ru azerty,bepo,euro,winkeys -option grp:win_space_toggle
 /usr/libexec/xfce-polkit &
 /home/core4/scripts/slideshow /home/core4/pics/wallpapers &
 /home/core4/scripts/set-brightness "$(cat ~/.settings/backlight)"
