@@ -1,104 +1,81 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "small",
+    //"type": "small",
+    "width": 50,
+    "height": 18,
     "padding": {
-      "bottom": 1,
-      "right": 2
+      "left": 2,
+      "top": 1,
+      "right": 0
     }
   },
   "display": {
-    "separator": ">> ",
+    "separator": "  ",
     "color": "0"
   },
   "modules": [
+    "break",
+    "break",
     {
-      "format": ">> {#1}{1}{#}{7}{#1}{2} <<",
-      "type": "title"
+      "key": "\uf108 PC",
+      "type": "host"
     },
     {
-      "format": "------------------------------------------------------ software ----",
-      "type" : "custom"
+      "format": "{1} x{5} @ {7} GHz",
+      "key": "  \uf4bc ",
+      "type": "cpu"
     },
     {
-      "format": "{2}",
-      "key": "| {#1;31}os   ",
+      "key": "  \uf4bc ",
+      "type": "gpu"
+    },
+    {
+      "key": "  \uefc5 ",
+      "type": "memory"
+    },
+    {
+      "key": "  \uefc5 ",
+      "type": "swap"
+    },
+    {
+      "format": "{?10}{10} {?}{1} / {2} ({3}) - {9}",
+      "key": "  \uf0a0 ",
+      "type": "disk"
+    },
+    {
+      "format": "{?1}{1}d {?}{?2}{2}h {?}{3}m",
+      "key": "  \uf017 ",
+      "type": "uptime"
+    },
+    "break",
+    "break",
+    {
+      "format": "{2} {12}",
+      "key": "\ue712 OS",
       "type": "os"
     },
     {
-      "format": "{12}",
-      "key": "| {#1;33}arch ",
-      "type": "os"
-    },
-    {
-      "key": "| {#1;32}kern ",
+      "key": "  \ue712 ",
       "type": "kernel"
     },
     {
-      "key": "| {#1;36}sh   ",
+      "format": "{5}{?8} on {8}",
+      "key": "  \uea85 ",
+      "type": "terminal"
+    },
+    {
+      "key": "  \uea85 ",
       "type": "shell"
     },
     {
       "format": "{2}",
-      "key": "| {#1;34}wm   ",
+      "key": "  \ueb7f ",
       "type": "wm"
     },
     {
-      "format": "{5} ({8})",
-      "key": "| {#1;35}term ",
-      "type": "terminal"
-    },
-    {
-      "key": "| {#1;31}pkgs ",
+      "key": "  \udb80\udfd7 ",
       "type": "packages"
     },
-    {
-      "format": "------------------------------------------------------ hardware ----",
-      "type" : "custom"
-    },
-    {
-      "key": "| {#1;31}pc   ",
-      "type": "host"
-    },
-    {
-      "key": "| {#1;33}up   ",
-      "type": "uptime"
-    },
-    {
-      "format": "{?6}{6} >> {?}{1}x{2} @ {3}Hz",
-      "key": "| {#1;32}disp ",
-      "type": "display"
-    },
-    {
-      "format": "{1} x{5} @ {7} GHz",
-      "key": "| {#1;36}cpu  ",
-      "type": "cpu"
-    },
-    {
-      "key": "| {#1;34}gpu  ",
-      "type": "gpu"
-    },
-    {
-      "key": "| {#1;35}ram  ",
-      "type": "memory"
-    },
-    {
-      "key": "| {#1;31}swap ",
-      "type": "swap"
-    },
-    {
-      "format": "{?10}{10} >> {?}{1} / {2} ({3}) - {9}",
-      "key": "| {#1;33}disk ",
-      "type": "disk"
-    },
-    {
-      "format": "{4} >> {1}",
-      "key": "| {#1;32}lip  ",
-      "type": "localip"
-    },
-    {
-      "format": "--------------------------------------------------------------------",
-      "type" : "custom"
-    }
   ]
 }
