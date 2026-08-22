@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 QUERY="$(echo '' | dmenu -p 'Type your search query here... ')"
-[ "$QUERY" == '' ] && exit 0
+[ -z "$QUERY" ] && exit 0
 
-QUERY="${QUERY// /%20}"
+QUERY="$(printf "%s" "$QUERY" | sed 's/ /%20/g')"
 
-SEARCH_ENGINE="https://searx.be/search?q="
+SEARCH_ENGINE="https://lite.duckduckgo.com/lite/?q="
 URL="${SEARCH_ENGINE}${QUERY}"
 
 echo "$URL"
