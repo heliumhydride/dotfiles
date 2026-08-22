@@ -1,5 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 sudo xbps-install -Su
-#flatpak update
 pmbootstrap pull

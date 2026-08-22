@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 _PROGNAME="$0"
 
 . "$(dirname "$0")/script_common.lib.sh" || exit 1
 
-[ "$USER" != root ] && error "please run this script as root."
+[ "$USER" != "root" ] && error "please run this script as root."
 
 if [ "$1" = "" ]; then
 	error "please provide a qcow2 file as argument"
@@ -38,7 +38,7 @@ done
 
 qemu-nbd --fork --connect="$NBD_DEV" "$VDISK"
 info "$VDISK connected to ${NBD_DEV}, press RETURN to disconnect the drive"
-read -r
+read a -r
 
 qemu-nbd --disconnect "$NBD_DEV" > /dev/null 2>&1
 sleep 0.5s

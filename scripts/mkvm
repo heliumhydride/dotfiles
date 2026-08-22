@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 . "$(dirname "$0")/script_common.lib.sh" || exit 1
 
@@ -32,7 +32,7 @@ DISK_FILE="$VM_DIR/$VM_NAME.qcow2"
 mkdir "$VM_DIR" -pv
 cp -v "$TEMPLATE" "$START_FILE"
 
-if [ "$STOR_SIZE" == 0 ]; then
+if [ "$STOR_SIZE" = "0" ]; then
 	info "storage size not set or set to 0, storage will not created"
 	warn "you will have to remove the disk line yourself if you dont use storage!"
 else 

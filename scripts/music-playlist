@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 . "$(dirname "$0")/script_common.lib.sh" || exit 1
 
@@ -11,7 +11,7 @@
 }
 
 PLAYLIST_PATH="${MUSIC_PATH}/playlist.m3u8"
-MPV_FLAGS=(--no-audio-display --loop-playlist=inf --playlist="$PLAYLIST_PATH")
+MPV_FLAGS="--no-audio-display --loop-playlist=inf --playlist=$PLAYLIST_PATH"
 TERMINAL="st"
 
 print_usage() {
@@ -37,13 +37,14 @@ for arg in "$@"; do
   esac
 done
 
-[ "$_shuffle" = "1" ] && MPV_FLAGS+=("--shuffle")
-if [ "$_in_term" == 1 ]; then
-  "$TERMINAL" -e mpv "${MPV_FLAGS[@]}" &
+[ "$_shuffle" = "1" ] && MPV_FLAGS="$MPV_FLAGS --shuffle"
+
+if [ "$_in_term" = "1" ]; then
+  "$TERMINAL" -e mpv ${MPV_FLAGS} &
 else
-  mpv "${MPV_FLAGS[@]}"
+  mpv ${MPV_FLAGS}
 fi
 
-(which cava 2>&1 && [ "$_in_term" == 1 ]) && {
+(which cava 2>&1 && [ "$_in_term" = "1" ]) && {
   "$TERMINAL" -e cava &
 } # launch audio visualizer if installed and we are launching in a new terminal window

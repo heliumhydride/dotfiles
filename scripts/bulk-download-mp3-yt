@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 for i in "$@"; do
 	yt-dlp -x -o '%(title)s.%(ext)s' --audio-format mp3 "$i" 

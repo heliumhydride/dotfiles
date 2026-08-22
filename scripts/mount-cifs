@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # can be used from the command-line like:
 #   $ SHARE=//x.x.x.x/myshare mount-cifs

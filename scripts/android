@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 quit=0
 
 adb devices -l | grep "device" | grep "product" > /dev/null
@@ -7,38 +7,40 @@ if [ "$?" -eq 1 ]; then
 	exit 1
 fi
 
-function quit {
+quit() {
 	quit=1
 }
 
-function shell {
+shell() {
 	st -e adb shell
 }
 
-function screen {
+screen() {
 	scrcpy
 }
 
-function fastbootd {
+fastbootd() {
 	adb reboot bootloader || fastboot reboot bootloader
 }
 
-function restart {
+restart() {
 	adb reboot || fastboot reboot
 }
 
-function download_mode {
+download_mode() {
 	adb reboot download
 }
 
-function recovery {
+recovery() {
 	adb reboot recovery || fastboot reboot recovery
 }
 
 
 while [ "$quit" -lt 1 ]; do
-	#eval $(grep function $0 | cut -f2 -d' ' | sed '$ d' | fzf --prompt "Select operation for the device: ")
-	eval $(grep function $0 | cut -f2 -d' ' | sed '$ d' | dmenu -l 7)
-	[ $quit = 1 ] || read -p "Press any key to continue..." none
+	eval $(grep '()' $0 | cut -f1 -d'(' | sed '$ d' | dmenu)
+	[ $quit = 1 ] || {
+    echo "Press RETURN to continue..."
+    read -r none
+  }
 done
 
