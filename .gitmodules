@@ -1,6 +1,3 @@
 [submodule "vimfiles/pack/plugins/start/lightline.vim"]
 	path = vimfiles/pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
-[submodule "vimfiles/plugin/vimsence"]
-	path = vimfiles/plugin/vimsence
-	url = https://github.com/vimsence/vimsence
