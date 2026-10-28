@@ -1,3 +1,6 @@
 [submodule "vimfiles/pack/plugins/start/lightline.vim"]
 	path = vimfiles/pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule "vimfiles/pack/plugins/start/resize-font.gvim"]
+	path = vimfiles/pack/plugins/start/resize-font.gvim
+	url = https://github.com/eggbean/resize-font.gvim
