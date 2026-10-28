@@ -4,4 +4,7 @@ color catppuccin_mocha
 set guifont=Iosevka\ Curly\ Light\ Italic\ Expanded\ 15
 "set guifont=Iosevka_Curly_Light_Extended:h15:W300:i:cANSI:qDRAFT
 
-set lines=36 columns=120
+set lines=26 columns=120
+
+nmap <C-kPlus> :call FontSizePlus()<CR>
+nmap <C-kMinus> :call FontSizeMinus()<CR>
