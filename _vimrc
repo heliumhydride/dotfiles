@@ -39,6 +39,10 @@ inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 
+" nicer searching
+set hlsearch
+nnoremap <F4> :noh<CR>
+
 " setup omnicomplete for autocompletion
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
