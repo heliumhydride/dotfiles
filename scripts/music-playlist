@@ -46,5 +46,5 @@ else
 fi
 
 (which cava 2>&1 && [ "$_in_term" = "1" ]) && {
-  "$TERMINAL" -e cava &
+  "$TERMINAL" -g "50x10+1300+700" -e cava &
 } # launch audio visualizer if installed and we are launching in a new terminal window
