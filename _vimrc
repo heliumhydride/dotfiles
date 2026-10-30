@@ -1,3 +1,5 @@
+" set colorscheme
+color catppuccin_mocha
 set termguicolors
 " for lightline
 set laststatus=2
