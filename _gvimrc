@@ -1,6 +1,6 @@
 " set font
-set guifont=Iosevka\ Curly\ Light\ Italic\ Expanded\ 15
-"set guifont=Iosevka_Curly_Light_Extended:h15:W300:i:cANSI:qDRAFT
+set guifont=Iosevka\ Curly\ Expanded\ 15
+"set guifont=Iosevka_Curly_Extended:h15:W300:cANSI:qDRAFT
 
 set lines=26 columns=120
 
