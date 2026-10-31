@@ -2,7 +2,7 @@
 setlocal enableextensions enabledelayedexpansion
 
 copy _cmdrc.cmd "%userprofile%"
-copy _vimrc-win32 "%userprofile%\_vimrc"
+copy _vimrc "%userprofile%"
 copy _gvimrc "%userprofile%"
 copy _gitconfig "%userprofile%\.gitconfig"
 echo.
