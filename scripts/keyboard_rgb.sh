@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DEVICE_ID_KEYBOARD=2
-DEVICE_ID_MOUSE=2
+DEVICE_ID_MOUSE=1
 
 . "$(dirname "$0")/script_common.lib.sh" || exit 1
 
