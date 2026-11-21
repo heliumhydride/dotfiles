@@ -10,12 +10,13 @@
   fi
 }
 
+[ -z "$MUSIC_VOLUME" ] && MUSIC_VOLUME=50
 PLAYLIST_PATH="${MUSIC_PATH}/playlist.m3u8"
-MPV_FLAGS="--no-audio-display --loop-playlist=inf --playlist=$PLAYLIST_PATH"
+MPV_FLAGS="--no-audio-display --loop-playlist=inf --playlist=$PLAYLIST_PATH --volume=$MUSIC_VOLUME"
 TERMINAL="st"
 
 print_usage() {
-  echo "$0 [-s] | [-e] | [-h]"
+  echo "$0 [options]"
   echo "  -s, --shuffle: play playlist shuffled"
   echo "  -e, --edit: edit playlist with \$EDITOR instead of playing it"
   echo "  -n, --no_terminal: do not launch terminal, also does not launch visualizer, installed or not"
