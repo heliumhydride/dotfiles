@@ -8,8 +8,8 @@ if "x%PLAYLIST_PATH%" == "x"  set PLAYLIST_PATH="%MUSIC_PATH%\playlist.m3u8"
 
 if "x%EDITOR%" == "x" (
     where /q vim
-    if errorlevel 1  (set EDITOR="notepad.exe"
-    ) else           (set EDITOR="vim.exe")
+    if errorlevel 1  (set EDITOR=notepad.exe
+    ) else           (set EDITOR=vim.exe)
 )
 
 :parse_args
@@ -30,7 +30,7 @@ echo     -h, --help      show this help
 exit /b 0
 
 :edit
-"%EDITOR%" %PLAYLIST_PATH%
+%EDITOR% %PLAYLIST_PATH%
 exit /b 0
 
 :play
